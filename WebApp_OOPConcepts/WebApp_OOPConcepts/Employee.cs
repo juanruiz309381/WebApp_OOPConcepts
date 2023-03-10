@@ -18,22 +18,24 @@ namespace WebApp_OOPConcepts
         //prop ,, Para los booleanos se pone un Is 
         public string Id { get; set; }
         public string FirstName { get; set; }
+        public string LastName { get; set; }
         public Date BirthDay { get; set; }
         public Date HiringDate { get; set; }
         public bool IsActive { get; set; }
 
         #endregion
 
-        public abstract decimal GetValueToPay(); //Para metodos abstractos
+        public abstract decimal GetValueToPay(); //Abstact method
 
         public override string ToString()
         {
             return ("$---EMPLOYEE---\n\t" +
                 $"ID....{Id}\n\t" +
-                $"First Name" +
-                $"Last Name" +
-                $"Birth Day" +
-                $"")
+                $"First Name.....{FirstName}\n\t" +
+                $"Last Name.....{LastName}\n\t" +
+                $"Birth Day.....{BirthDay}\n\t" +
+                $"Hiring date.....{HiringDate}\n\t"+
+                $"Is active?.....{IsActive}\n\t")
                 ;
         }
 

@@ -1,6 +1,5 @@
 ﻿//this class apply control the data, for that reason the "try-catch" in this class
-//Commit proof
-//Obs. I cannot send the last part to github
+
 using System;
 
 namespace WebApp_OOPConcepts
@@ -16,11 +15,11 @@ namespace WebApp_OOPConcepts
                 Console.WriteLine("**************************");
 
                 Console.WriteLine("Please type your year: ");
+                Console.WriteLine("Please type your month: ");
                 int year = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine(" ");
-
-                Console.WriteLine("Please type your month: ");
                 int month = Convert.ToInt32(Console.ReadLine());
+
                 Console.WriteLine(" ");
 
                 Console.WriteLine("Please type your day: ");
