@@ -1,5 +1,5 @@
 ﻿//this class apply control the data, for that reason the "try-catch" in this class
-//Proff
+//Commit proof
 //Obs. I cannot send the last part to github
 using System;
 
