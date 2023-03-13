@@ -15,11 +15,11 @@ namespace WebApp_OOPConcepts
                 Console.WriteLine("**************************");
 
                 Console.WriteLine("Please type your year: ");
-                Console.WriteLine("Please type your month: ");
                 int year = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine(" ");
-                int month = Convert.ToInt32(Console.ReadLine());
 
+                Console.WriteLine("Please type your month: ");
+                int month = Convert.ToInt32(Console.ReadLine());                
                 Console.WriteLine(" ");
 
                 Console.WriteLine("Please type your day: ");
@@ -28,6 +28,20 @@ namespace WebApp_OOPConcepts
 
                 var dateObject = new Date(year, month, day);
                 Console.WriteLine("The data entered is: "+ dateObject);
+
+                Employee salaryEmployee = new SalaryEmployee() { 
+                
+                    Id = 1,
+                    FirstName = "Patricia",
+                    LastName = "Alvarez",
+                    BirthDay = dateObject,
+                    HiringDate = dateObject,
+                    IsActive = true,
+                    Salary = 1160000
+                };
+                Console.WriteLine(salaryEmployee); //Same to say salaryEmployee.ToString()
+
+
             }
             catch (Exception message) { 
                 Console.WriteLine(message); 

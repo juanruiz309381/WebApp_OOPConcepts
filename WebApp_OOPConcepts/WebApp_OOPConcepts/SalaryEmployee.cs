@@ -13,7 +13,8 @@
 
         public override string ToString()
         {
-            return Salary.ToString();
+            return $"{base.ToString()}\n\t" + //base same to super in java
+                $"Salary........{GetValueToPay():C2}"; //Currency with 2 decimals
         }
     }
 }

@@ -16,7 +16,7 @@ namespace WebApp_OOPConcepts
     {
         #region
         //prop ,, Para los booleanos se pone un Is 
-        public string Id { get; set; }
+        public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public Date BirthDay { get; set; }
