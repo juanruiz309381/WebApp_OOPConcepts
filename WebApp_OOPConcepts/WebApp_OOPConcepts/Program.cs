@@ -40,6 +40,22 @@ namespace WebApp_OOPConcepts
                     Salary = 1160000
                 };
                 Console.WriteLine(salaryEmployee); //Same to say salaryEmployee.ToString()
+                Console.WriteLine(" ");
+
+                Employee CommissionEmployee = new CommissionEmployee()
+                {
+
+                    Id = 1,
+                    FirstName = "Julio",
+                    LastName = "Perez",
+                    BirthDay = dateObject,
+                    HiringDate = dateObject,
+                    IsActive = false,
+                    CommissionPercentage= 0.05,
+                    Sales = 20000000 
+                 
+                };
+                Console.WriteLine(salaryEmployee); //Same to say salaryEmployee.ToString()
 
 
             }
