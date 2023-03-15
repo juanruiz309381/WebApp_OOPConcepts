@@ -57,43 +57,22 @@ namespace WebApp_OOPConcepts
                 };
                 Console.WriteLine(CommissionEmployee);
                 Console.WriteLine(" ");
-
-
-                Console.Write("Please type the ID: ");
-                int id = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine(" ");
-
-                Console.Write("Please type the first name: ");
-                string firstName = Console.ReadLine();
-                Console.WriteLine(" ");
-
-                Console.Write("Please type the last name: ");
-                string fastName = Console.ReadLine();
-                Console.WriteLine(" ");
-
-                Console.Write("Please type the if is active: ");
-                bool isActive = Convert.ToBoolean(Console.ReadLine());
-                Console.WriteLine(" ");
-
-                Console.Write("Please type the number of hours: ");
-                float hours = Convert.ToSingle(Console.ReadLine());
-                Console.WriteLine(" ");
-
-                Console.Write("Please type value per hour: ");
-                decimal hoursValue = Convert.ToDecimal(Console.ReadLine());
-                Console.WriteLine(" ");
-
-
+                
+                /*
+                 * created object propertyRead
+                 */
+                PropertyRead propertyRead = new PropertyRead();
                 Employee hourlyEmployee = new HourlyEmployee()
                 {
-                    Id = id,
-                    FirstName = firstName,
-                    LastName = fastName,
+                    
+                    Id = propertyRead.id,
+                    FirstName = propertyRead.firstName,
+                    LastName = propertyRead.lastName,
                     BirthDay = new Date(year, month, day),
                     HiringDate = new Date(year, month, day),
-                    IsActive = isActive,
-                    Hours= hours,
-                    HourValue = hoursValue,                              
+                    IsActive = propertyRead.isActive,
+                    Hours= propertyRead.hours,
+                    HourValue = propertyRead.hourValue,                              
                 };            
                 Console.WriteLine(hourlyEmployee); //min. 28
                 Console.WriteLine(" ");
