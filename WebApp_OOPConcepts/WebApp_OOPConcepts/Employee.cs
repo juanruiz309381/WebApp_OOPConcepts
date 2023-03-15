@@ -30,11 +30,11 @@ namespace WebApp_OOPConcepts
         public override string ToString()
         {
             return ("$---EMPLOYEE---\n\t" +
-                $"ID....{Id}\n\t" +
+                $"ID.............{Id}\n\t" +
                 $"First Name.....{FirstName}\n\t" +
-                $"Last Name.....{LastName}\n\t" +
-                $"Birth Day.....{BirthDay}\n\t" +
-                $"Hiring date.....{HiringDate}\n\t"+
+                $"Last Name......{LastName}\n\t" +
+                $"Birth Day......{BirthDay}\n\t" +
+                $"Hiring date....{HiringDate}\n\t"+
                 $"Is active?.....{IsActive}\n\t")
                 ;
         }

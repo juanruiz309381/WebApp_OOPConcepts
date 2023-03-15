@@ -9,7 +9,8 @@ namespace WebApp_OOPConcepts
         static void Main(string[] args)
         {
             //create try-catch for month
-            try {
+            try
+            {
                 Console.WriteLine("**************************");
                 Console.WriteLine("My first day class");
                 Console.WriteLine("**************************");
@@ -19,23 +20,22 @@ namespace WebApp_OOPConcepts
                 Console.WriteLine(" ");
 
                 Console.WriteLine("Please type your month: ");
-                int month = Convert.ToInt32(Console.ReadLine());                
+                int month = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine(" ");
 
                 Console.WriteLine("Please type your day: ");
                 int day = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine(" ");
+                          
 
-                var dateObject = new Date(year, month, day);
-                Console.WriteLine("The data entered is: "+ dateObject);
+                Employee salaryEmployee = new SalaryEmployee()
+                {
 
-                Employee salaryEmployee = new SalaryEmployee() { 
-                
                     Id = 1,
                     FirstName = "Patricia",
                     LastName = "Alvarez",
-                    BirthDay = dateObject,
-                    HiringDate = dateObject,
+                    BirthDay = new Date(year, month, day),
+                    HiringDate = new Date(year, month, day),
                     IsActive = true,
                     Salary = 1160000
                 };
@@ -48,17 +48,58 @@ namespace WebApp_OOPConcepts
                     Id = 1,
                     FirstName = "Julio",
                     LastName = "Perez",
-                    BirthDay = dateObject,
-                    HiringDate = dateObject,
+                    BirthDay = new Date(year, month, day),
+                    HiringDate = new Date(year, month, day),
                     IsActive = false,
-                    CommissionPercentage= 0.05,
-                    Sales = 20000000 
-                 
+                    CommissionPercentage = 5,
+                    Sales = 20000000
+
                 };
-                Console.WriteLine(salaryEmployee); //Same to say salaryEmployee.ToString()
+                Console.WriteLine(CommissionEmployee);
+                Console.WriteLine(" ");
 
 
-            }
+                Console.Write("Please type the ID: ");
+                int id = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine(" ");
+
+                Console.Write("Please type the first name: ");
+                string firstName = Console.ReadLine();
+                Console.WriteLine(" ");
+
+                Console.Write("Please type the last name: ");
+                string fastName = Console.ReadLine();
+                Console.WriteLine(" ");
+
+                Console.Write("Please type the if is active: ");
+                bool isActive = Convert.ToBoolean(Console.ReadLine());
+                Console.WriteLine(" ");
+
+                Console.Write("Please type the number of hours: ");
+                float hours = Convert.ToSingle(Console.ReadLine());
+                Console.WriteLine(" ");
+
+                Console.Write("Please type value per hour: ");
+                decimal hoursValue = Convert.ToDecimal(Console.ReadLine());
+                Console.WriteLine(" ");
+
+
+                Employee hourlyEmployee = new HourlyEmployee()
+                {
+                    Id = id,
+                    FirstName = firstName,
+                    LastName = fastName,
+                    BirthDay = new Date(year, month, day),
+                    HiringDate = new Date(year, month, day),
+                    IsActive = isActive,
+                    Hours= hours,
+                    HourValue = hoursValue,                              
+                };            
+                Console.WriteLine(hourlyEmployee); //min. 28
+                Console.WriteLine(" ");
+
+
+        }
             catch (Exception message) { 
                 Console.WriteLine(message); 
             }

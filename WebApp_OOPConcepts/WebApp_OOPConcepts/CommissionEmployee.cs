@@ -17,8 +17,8 @@
         {
             return $"{base.ToString()}\n\t" +
                 $"Commission percentage........{CommissionPercentage:P2}\n\t" + //Percentage
-                $"Sales...........{Sales:C2}\n\t" +
-                $"Get value to pay......{GetValueToPay():C2}\n\t";
+                $"Sales........................{Sales:C2}\n\t" +
+                $"Get value to pay.............{GetValueToPay():C2}\n\t";
 
         }
     }
