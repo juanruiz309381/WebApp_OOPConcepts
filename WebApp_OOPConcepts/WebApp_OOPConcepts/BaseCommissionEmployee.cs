@@ -18,6 +18,6 @@
                 $"Base............{Base:C2}\n\t" +               
                 $"Total...........{GetValueToPay():C2}\n\t";
 
-        }
+        }   //MIN. 14:00
     }
 }

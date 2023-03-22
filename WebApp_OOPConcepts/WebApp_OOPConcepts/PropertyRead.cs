@@ -5,7 +5,7 @@ namespace WebApp_OOPConcepts
     {
 
         /*
-         * MANDAR TODO ESTO A UNA CLASE PROPERTYREAD
+         * This methods are use in class program
          * 
          */
         public int id { get; set; }
