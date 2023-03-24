@@ -1,6 +1,8 @@
 ﻿//this class apply control the data, for that reason the "try-catch" in this class
 
 using System;
+using System.Collections.Generic;
+using WebApp_OOPConcepts.Helpers;
 
 namespace WebApp_OOPConcepts
 {
@@ -39,10 +41,10 @@ namespace WebApp_OOPConcepts
                     IsActive = true,
                     Salary = 1160000
                 };
-                Console.WriteLine(salaryEmployee); //Same to say salaryEmployee.ToString()
+                //Console.WriteLine(salaryEmployee); //Same to say salaryEmployee.ToString()
                 Console.WriteLine(" ");
 
-                Employee CommissionEmployee = new CommissionEmployee()
+                Employee commissionEmployee = new CommissionEmployee()
                 {
 
                     Id = 200,
@@ -55,7 +57,7 @@ namespace WebApp_OOPConcepts
                     Sales = 20000000
 
                 };
-                Console.WriteLine(CommissionEmployee);
+                //Console.WriteLine(CommissionEmployee);
                 Console.WriteLine(" ");
 
                 
@@ -75,10 +77,10 @@ namespace WebApp_OOPConcepts
                     Hours= propertyRead.hours,
                     HourValue = propertyRead.hourValue,                              
                 };            
-                Console.WriteLine(hourlyEmployee); //min. 28
+                //Console.WriteLine(hourlyEmployee); //min. 28
                 Console.WriteLine(" ");
 
-                Employee BaseCommissionEmployee = new BaseCommissionEmployee()
+                Employee baseCommissionEmployee = new BaseCommissionEmployee()
                 {
 
                     Id = 400,
@@ -92,7 +94,12 @@ namespace WebApp_OOPConcepts
                     Base = 5000000
 
                 };
-                Console.WriteLine(BaseCommissionEmployee);
+                //Console.WriteLine(BaseCommissionEmployee);
+                Console.WriteLine(" ");
+
+                EmployeeHelper employeeHelper = new EmployeeHelper(salaryEmployee,commissionEmployee,
+                hourlyEmployee, baseCommissionEmployee);
+                Console.WriteLine($"Total payroll.........{employeeHelper.GetPayrollFromActiveEmployees():C2}\t\n");
                 Console.WriteLine(" ");
 
                 Invoice invoice = new Invoice()
